@@ -1,11 +1,13 @@
-defmodule CpcopServer.Endpoint do
+defmodule CpcopServerWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :cpcop_server
 
-  socket "/socket", CpcopServer.UserSocket
+  socket "/socket", CpcopServerWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
-  # You should set gzip to true if you are running phoenix.digest
+  # You should set gzip to true if you are running phx.digest
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
@@ -38,7 +40,7 @@ defmodule CpcopServer.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_cpcop_server_key",
-    signing_salt: "Ou84fgUU"
+    signing_salt: "Q2QuOOKm"
 
   plug CpcopServerWeb.Router
 end
