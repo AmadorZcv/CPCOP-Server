@@ -40,7 +40,7 @@ defmodule CpcopServerWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_cpcop_server_key",
-    signing_salt: "Q2QuOOKm"
+    signing_salt: "CGFgwaQX"
 
   plug CpcopServerWeb.Router
 end

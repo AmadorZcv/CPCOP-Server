@@ -19,8 +19,9 @@ defmodule CpcopServerWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", CpcopServerWeb do
-  #   pipe_through :api
-  # end
+  scope "/api/v1", CpcopServerWeb do
+    pipe_through :api
+
+    resources "/users", UserController, only: [:create, :show]
+  end
 end

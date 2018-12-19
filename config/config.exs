@@ -13,7 +13,7 @@ config :cpcop_server,
 # Configures the endpoint
 config :cpcop_server, CpcopServerWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "/DyKvJQUDNKLPSZurUEW7TmcvH7S0hGX5qhkCJTAmutIG5ZFtOTF5xCIxVt71KNl",
+  secret_key_base: "nBH1B9iTNqidwJbsXhQTW6+FsuCvlYERiZmxGAOf0Izds9WHa7VG/EhWdOXNu9g9",
   render_errors: [view: CpcopServerWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: CpcopServer.PubSub, adapter: Phoenix.PubSub.PG2]
 
