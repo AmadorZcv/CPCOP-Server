@@ -19,6 +19,10 @@ defmodule CpcopServerWeb.UserSocket do
     {:ok, socket}
   end
 
+  socket "/socket", HelloWeb.UserSocket,
+    websocket: [timeout: 45_000],
+    longpoll: false
+
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
   #     def id(socket), do: "user_socket:#{socket.assigns.user_id}"
