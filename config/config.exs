@@ -7,8 +7,7 @@
 # General application configuration
 use Mix.Config
 
-config :cpcop_server,
-  ecto_repos: [CpcopServer.Repo]
+config :cpcop_server, ecto_repos: [CpcopServer.Repo]
 
 # Configures the endpoint
 config :cpcop_server, CpcopServerWeb.Endpoint,
@@ -24,6 +23,10 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :cpcop_server, CpcopServer.Guardian,
+  issuer: "cpcop_server",
+  secret_key: "DzjkRvRD4/ECbHjVos6OFEuJDRtRTVkxGNftkern+OO8KZcAWS2pTp1doDohHBCF"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
