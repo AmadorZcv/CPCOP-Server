@@ -43,4 +43,9 @@ defmodule CpcopServerWeb.Endpoint do
     signing_salt: "CGFgwaQX"
 
   plug CpcopServerWeb.Router
+
+  ## Transports
+  socket "/socket", CpcopServerWeb.UserSocket,
+    websocket: [timeout: 45_000],
+    longpoll: false
 end
