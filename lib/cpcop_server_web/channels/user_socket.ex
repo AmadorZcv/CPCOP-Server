@@ -19,7 +19,7 @@ defmodule CpcopServerWeb.UserSocket do
     {:ok, socket}
   end
 
-  socket "/socket", HelloWeb.UserSocket,
+  socket "/socket", CpcopServerWeb.UserSocket,
     websocket: [timeout: 45_000],
     longpoll: false
 
